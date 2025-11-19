@@ -814,7 +814,7 @@ hr {
     }
 }
 
-/* Dispositivos con alta resolución (2x, 3x) */
+/* Dispositivos con alta resolución */
 @media screen and (-webkit-min-device-pixel-ratio: 2), 
        screen and (min-resolution: 192dpi) {
     .logo img,
