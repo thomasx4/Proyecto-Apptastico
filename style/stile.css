@@ -1,34 +1,41 @@
+/* Declaración de codificación de caracteres */
 @charset "utf-8";
+
+/* Importación de fuentes de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans&display=swap');
 
+/* Reset global para todos los elementos */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del width/height */
 }
 
+/* Estilos base para html y body */
 html, body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif; /* Fuente principal */
 }
 
-/* Header */
+/* ===== HEADER ===== */
 .header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around; /* Distribuye el espacio alrededor de los elementos */
     background-color: rgb(95, 102, 124);
     height: 100px;
     padding: 0 20px;
 }
 
+/* Logo del header */
 .logo img {
-    height: 60px;
+    height: 60px; /* Altura fija para el logo */
 }
 
+/* Navegación principal */
 .nav nav {
     display: flex;
-    gap: 30px;
+    gap: 30px; /* Espacio entre enlaces de navegación */
 }
 
 .nav a {
@@ -38,14 +45,14 @@ html, body {
     font-size: 18px;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Transición suave para efectos hover */
 }
 
 .nav a:hover {
-    background-color: rgb(63, 73, 107);
+    background-color: rgb(63, 73, 107); /* Color de fondo al hacer hover */
 }
 
-/* Main Cellphone Section */
+/* ===== SECCIÓN PRINCIPAL DEL TELÉFONO ===== */
 .cellphone {
     display: flex;
     flex-direction: row;
@@ -53,22 +60,24 @@ html, body {
     justify-content: space-between;
     background-color: rgb(95, 102, 124);
     padding: 60px 100px;
-    min-height: 600px;
+    min-height: 600px; /* Altura mínima de la sección */
 }
 
+/* Contenedor de la imagen del teléfono */
 .image-phone {
-    flex: 1;
+    flex: 1; /* Ocupa 1 parte del espacio disponible */
     display: flex;
     justify-content: center;
 }
 
 .image-phone img {
-    max-width: 100%;
+    max-width: 100%; /* Imagen responsive */
     height: auto;
 }
 
+/* Contenedor de información de contacto */
 .contact-phone {
-    flex: 1;
+    flex: 1; /* Ocupa 1 parte del espacio disponible */
     padding: 0 40px;
     color: white;
 }
@@ -80,14 +89,16 @@ html, body {
     margin-bottom: 20px;
 }
 
+/* Texto en color blanco */
 .contact-phone .blanco {
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     color: white;
-    line-height: 1.6;
+    line-height: 1.6; /* Mejor legibilidad */
     margin-bottom: 20px;
 }
 
+/* Texto en color gris */
 .contact-phone .gris {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -96,6 +107,7 @@ html, body {
     margin-bottom: 30px;
 }
 
+/* Contenedor de botones */
 .buttons {
     display: flex;
     flex-direction: row;
@@ -103,25 +115,26 @@ html, body {
     gap: 20px;
 }
 
+/* Botón con estilo blanco/gradiente */
 .btn-white {
-    background: linear-gradient(to bottom, #4da9f0, #1e88e5);
+    background: linear-gradient(to bottom, #4da9f0, #1e88e5); /* Gradiente azul */
     color: white;
     border: none;
     padding: 12px 30px;
-    border-radius: 30px;
+    border-radius: 30px; /* Bordes completamente redondeados */
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6); /* Sombra para efecto de profundidad */
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
 }
 
 .btn-white:hover {
-    background: linear-gradient(to bottom, #1e88e5, #4da9f0);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
-    transform: translateY(-3px);
+    background: linear-gradient(to bottom, #1e88e5, #4da9f0); /* Invierte el gradiente al hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8); /* Aumenta la sombra al hover */
+    transform: translateY(-3px); /* Efecto de levitación */
 }
 
 .buttons p {
@@ -129,6 +142,7 @@ html, body {
     font-size: 16px;
 }
 
+/* Botón transparente */
 .btn-transparent {
     color: white;
     text-decoration: none;
@@ -140,10 +154,10 @@ html, body {
 }
 
 .btn-transparent:hover {
-    color: #4da9f0;
+    color: #4da9f0; /* Cambia a azul al hacer hover */
 }
 
-/* Dummy Navigation */
+/* ===== NAVEGACIÓN DUMMY (MARCA O SECCIÓN SECUNDARIA) ===== */
 .dummy {
     display: flex;
     flex-direction: row;
@@ -155,15 +169,15 @@ html, body {
 }
 
 .dummy img {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Transición para efecto hover */
     max-height: 60px;
 }
 
 .dummy img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Efecto de agrandamiento al hover */
 }
 
-/* Funciones Section */
+/* ===== SECCIÓN DE FUNCIONES ===== */
 .funciones {
     display: flex;
     flex-direction: row;
@@ -171,9 +185,10 @@ html, body {
     align-items: flex-start;
     background-color: rgb(255, 255, 255);
     padding: 80px 40px;
-    gap: 60px;
+    gap: 60px; /* Espacio entre elementos funcionales */
 }
 
+/* Cada función individual */
 .funcion {
     display: flex;
     flex-direction: column;
@@ -201,6 +216,7 @@ html, body {
     margin-bottom: 20px;
 }
 
+/* Enlace "Leer más" */
 .read-more {
     background: linear-gradient(to bottom, #4da9f0, #1e88e5);
     color: white;
@@ -220,12 +236,13 @@ html, body {
     transform: translateY(-3px);
 }
 
-/* Projects Section */
+/* ===== SECCIÓN DE PROYECTOS ===== */
 .shape02 {
     margin: 60px 0 0 100px;
-    vertical-align: middle;
+    vertical-align: middle; /* Alineación vertical con el texto */
 }
 
+/* Título de proyectos */
 .shape02 + h2 {
     font-size: 32px;
     color: rgb(50, 50, 50);
@@ -235,6 +252,7 @@ html, body {
     font-weight: 600;
 }
 
+/* Contenedor de proyectos */
 .projects {
     display: flex;
     flex-direction: row;
@@ -245,6 +263,7 @@ html, body {
     margin-top: 30px;
 }
 
+/* Cada trabajo/proyecto individual */
 .trabajo {
     flex: 1;
     max-width: 250px;
@@ -260,10 +279,10 @@ html, body {
 
 .trabajo img:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Efecto de levitación */
 }
 
-/* Int-Tw Section */
+/* ===== SECCIÓN INT & TW (INTERES/TWITTER) ===== */
 .int-tw {
     display: flex;
     flex-direction: row;
@@ -274,6 +293,7 @@ html, body {
     background-color: rgb(255, 255, 255);
 }
 
+/* Columnas izquierda y derecha */
 .int, .tw {
     flex: 1;
     max-width: 500px;
@@ -289,6 +309,7 @@ html, body {
     font-weight: 600;
 }
 
+/* Elemento de información individual */
 .info {
     display: flex;
     flex-direction: row;
@@ -302,11 +323,11 @@ html, body {
     height: 80px;
     border-radius: 8px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
-    flex-shrink: 0;
+    flex-shrink: 0; /* Evita que la imagen se reduzca */
 }
 
 .info-content {
-    flex: 1;
+    flex: 1; /* Ocupa el espacio restante */
 }
 
 .info h3 {
@@ -322,6 +343,7 @@ html, body {
     line-height: 1.6;
 }
 
+/* Estilos para enlaces de texto */
 .text {
     color: rgb(9, 131, 131);
     text-decoration: none;
@@ -339,6 +361,7 @@ html, body {
     display: inline-block;
 }
 
+/* Columna Twitter */
 .tw {
     display: flex;
     flex-direction: column;
@@ -366,7 +389,8 @@ html, body {
     display: inline-block;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
+/* Línea separadora */
 hr {
     border: none;
     border-top: 1px solid rgb(200, 200, 200);
@@ -390,6 +414,7 @@ hr {
     font-weight: normal;
 }
 
+/* Enlaces sociales */
 .enlaces {
     display: flex;
     flex-direction: row;
@@ -402,11 +427,12 @@ hr {
 }
 
 .enlaces a img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Efecto de agrandamiento al hover */
 }
 
 /* ===== MEDIA QUERIES RESPONSIVOS ===== */
 
+/* Tablets y pantallas medianas */
 @media screen and (max-width: 1024px) {
     .cellphone {
         padding: 40px 60px;
@@ -448,6 +474,7 @@ hr {
     }
 }
 
+/* Tablets pequeñas y móviles grandes */
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -474,7 +501,7 @@ hr {
     }
     
     .image-phone {
-        order: 2;
+        order: 2; /* Cambia el orden para mobile-first */
     }
     
     .contact-phone {
@@ -566,6 +593,7 @@ hr {
     }
 }
 
+/* Móviles medianos */
 @media screen and (max-width: 600px) {
     .cellphone {
         padding: 30px 20px;
@@ -663,6 +691,7 @@ hr {
     }
 }
 
+/* Móviles pequeños */
 @media screen and (max-width: 480px) {
     .nav nav {
         gap: 15px;
@@ -748,6 +777,7 @@ hr {
     }
 }
 
+/* Móviles muy pequeños */
 @media screen and (max-width: 320px) {
     .cellphone {
         padding: 20px 15px;
@@ -785,6 +815,7 @@ hr {
     }
 }
 
+/* Dispositivos en orientación landscape con altura reducida */
 @media screen and (max-height: 500px) and (orientation: landscape) {
     .header {
         padding: 15px 20px;
@@ -811,18 +842,5 @@ hr {
     
     .int-tw {
         padding: 30px 20px;
-    }
-}
-
-/* Dispositivos con alta resolución */
-@media screen and (-webkit-min-device-pixel-ratio: 2), 
-       screen and (min-resolution: 192dpi) {
-    .logo img,
-    .dummy img,
-    .enlaces a img,
-    .shape02,
-    .shape03,
-    .shape04 {
-        image-rendering: -webkit-optimize-contrast;
     }
 }
